@@ -3,8 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="CSS/MainPage.css">
 </head>
 <body>
+<nav class="Nav-Bar">
+    <p>Michail Lionakis</p>
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleMenu()">Menu</button>
+        <div class="dropdown-content" id="navDropdown">
+            <a href="">Home</a>
+            <a href="">Services</a>
+            <a href="">Projects</a>
+            <a href="">Who am I</a>
+            <a href="">Contact</a>
+        </div>
+    </div>
+</nav>
+<div class="Card-Container">
+    <a class="Main-Card" id="Services">
+        <p>Services</p>
+    </a>
+    <a class="Main-Card" id="Projects">
+        <p>Projects</p>
+    </a>
+    <a class="Main-Card" id="Who-am-I">
+        <p>Who am I</p>
+    </a>
+</div>
 
 </body>
+<script src="JavaScript/MainPage.js"></script>
 </html>
