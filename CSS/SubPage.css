@@ -1,0 +1,130 @@
+/*#region algemeen */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "JetBrains Mono", monospace;
+}
+body {
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+/*#endregion */
+
+/*#region nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 5vw;
+    background: black;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-bottom: 2px solid white;
+    p {
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: white;
+        font-size: 1.2rem;
+        border-left: 3px solid white;
+        padding-left: 10px;
+    }
+    .Nav-Logo {
+        text-decoration: none;
+        color: inherit;
+    }
+    .Nav-Logo:hover {
+        opacity: 0.8;
+    }
+}
+
+.dropdown {
+    position: relative;
+    .dropbtn {
+        background-color: white;
+        color: black;
+        padding: 10px 25px;
+        font-size: 14px;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: 0.3s;
+        &:active { background-color: #ccc; }
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #111;
+        min-width: 200px;
+        border: 1px solid white;
+        border-radius: 10px;
+        margin-top: 5px;
+        overflow: hidden;
+        &.show { display: block; }
+        a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            display: block;
+            transition: 0.2s;
+            &:hover {
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+}
+/*#endregion */
+
+/*#region responsiveness */
+@media screen and (max-width: 1024px) {
+    .Card-Container { flex-direction: column; padding: 50px 20px; gap: 40px; }
+    .Main-Card {
+        min-width: 85vw;
+        min-height: 25vh;
+        transform: skewX(-5deg);
+        p { transform: skewX(5deg); font-size: 4rem; }
+    }
+    nav {
+        padding: 3vh 5vw;
+        gap: 2vh;
+        flex-direction: column;
+        p {
+            border-left: none;
+            border-bottom: 2px solid white;
+            padding: 0 0 5px 0;
+            font-size: 3rem;
+            text-align: center;
+            width: 100%;
+        }
+    }
+    .dropdown {
+        width: 100%;
+        .dropbtn { width: 100%; padding: 15px; font-size: 3rem; letter-spacing: 1px; }
+        .dropdown-content {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(15px);
+            border-radius: 0;
+            &.show { display: flex; flex-direction: column; justify-content: center; }
+            a {
+                font-size: 4rem;
+                padding: 25px;
+                text-align: center;
+                &:hover { background: transparent; color: white; }
+            }
+        }
+    }
+}
+/*#endregion */

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Michail Lionakis</title>
     <link rel="stylesheet" href="CSS/MainPage.css">
 </head>
 <body>
@@ -11,26 +11,29 @@
     <div class="dropdown">
         <button class="dropbtn" onclick="toggleMenu()">Menu</button>
         <div class="dropdown-content" id="navDropdown">
-            <a href="">Home</a>
-            <a href="">Services</a>
-            <a href="">Projects</a>
-            <a href="">Who am I</a>
-            <a href="">Contact</a>
+            <a href="HTML/Services.html">Services</a>
+            <a href="HTML/Projects.html">Projects</a>
+            <a href="HTML/AboutMe.html">Who am I</a>
+            <a href="HTML/Contact.html">Contact</a>
         </div>
     </div>
 </nav>
 <div class="Card-Container">
-    <a class="Main-Card" id="Services">
+    <a href="HTML/Services.html" class="Main-Card" id="Services" >
         <p>Services</p>
     </a>
-    <a class="Main-Card" id="Projects">
+    <a href="HTML/Projects.html" class="Main-Card" id="Projects">
         <p>Projects</p>
     </a>
-    <a class="Main-Card" id="Who-am-I">
+    <a href="HTML/AboutMe.html" class="Main-Card" id="Who-am-I">
         <p>Who am I</p>
+    </a>
+    <a href="HTML/Contact.html" class="Main-Card" id="Contact">
+        <p>Contact</p>
     </a>
 </div>
 
 </body>
+<script src="JavaScript/DropDownMenu.js"></script>
 <script src="JavaScript/MainPage.js"></script>
 </html>

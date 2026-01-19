@@ -6,8 +6,8 @@
     font-family: "JetBrains Mono", monospace;
 }
 body {
-    background-color: #000;
-    color: #fff;
+    background-color: black;
+    color: white;
     overflow-x: hidden;
 }
 /*#endregion */
@@ -18,62 +18,60 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 2vh 5vw;
-    background: #000;
-    border-bottom: 1px solid #333;
+    background: black;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1;
+    border-bottom: 2px solid #333;
+    p {
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: white;
+        font-size: 1.2rem;
+        border-left: 3px solid #333;
+        padding-left: 10px;
+    }
 }
-nav p {
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #FFD700;
-    font-size: 1.2rem;
-    border-left: 3px solid #FFD700;
-    padding-left: 10px;
-}
+
 .dropdown {
     position: relative;
-}
-.dropbtn {
-    background-color: #FFD700;
-    color: #000;
-    padding: 10px 25px;
-    font-size: 14px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: 0.3s;
-}
-.dropbtn:active {
-    background-color: #fff;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #111;
-    min-width: 200px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.8);
-    border: 1px solid #FFD700;
-    margin-top: 5px;
-}
-.dropdown-content.show {
-    display: block;
-}
-.dropdown-content a {
-    color: #fff;
-    padding: 15px 20px;
-    text-decoration: none;
-    display: block;
-    font-size: 14px;
-    transition: 0.2s;
-}
-.dropdown-content a:hover {
-    background-color: #FFD700;
-    color: #000;
+    .dropbtn {
+        background-color: white;
+        color: black;
+        padding: 10px 25px;
+        font-size: 14px;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: 0.3s;
+        &:active { background-color: #ccc; }
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #111;
+        min-width: 200px;
+        border: 1px solid white;
+        border-radius: 10px;
+        margin-top: 5px;
+        overflow: hidden;
+        &.show { display: block; }
+        a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            display: block;
+            transition: 0.2s;
+            &:hover {
+                background-color: white;
+                color: black;
+            }
+        }
+    }
 }
 /*#endregion */
 
@@ -86,88 +84,102 @@ nav p {
     padding: 100px 50px;
     min-height: 80vh;
 }
+
 .Main-Card {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #111;
-    border: 2px solid #FFD700;
+    background-color: #1a1a1a;
+    border: 2px solid #333;
+    border-radius: 10px;
     padding: 40px;
     min-width: 18vw;
     min-height: 50vh;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     transform: skewX(-15deg);
     text-decoration: none;
-}
-.Main-Card:hover {
-    background-color: #FFD700;
-    transform: skewX(-15deg) translateY(-15px);
-    box-shadow: 15px 15px 0 #fff;
-}
-.Main-Card p {
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    transform: skewX(15deg);
-    transition: color 0.3s;
-    text-align: center;
-}
-.Main-Card:hover p {
-    color: #000;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.4);
+    p {
+        color: white;
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        transform: skewX(15deg);
+        transition: color 0.3s;
+    }
+    &:hover {
+        background-color: white;
+        border-color: white;
+        transform: skewX(-15deg) translateY(-15px);
+        box-shadow: 15px 15px 0 #333;
+        p { color: black; }
+    }
 }
 /*#endregion */
 
+/*#region cards background*/
+#Services {
+    background-image: url('../Images/Autumn-Trees.jpg');
+}
+
+#Projects {
+    background-image: url('../Images/autumn-Trees2.jpg');
+}
+
+#Who-am-I {
+    background-image: url('../Images/Winter-Trees.jpg');
+}
+
+#Contact {
+    background-image: url('../Images/Mountains.jpeg');
+}
+/*#endregion*/
+
 /*#region responsiveness */
 @media screen and (max-width: 1024px) {
-    .Card-Container {
-        flex-direction: column;
-        padding: 50px 20px;
-        gap: 40px;
-    }
+    .Card-Container { flex-direction: column; padding: 50px 20px; gap: 40px; }
     .Main-Card {
-        min-width: 70vw;
-        min-height: 27vh;
-        transform: skewX(-10deg);
+        min-width: 85vw;
+        min-height: 25vh;
+        transform: skewX(-5deg);
+        p { transform: skewX(5deg); font-size: 4rem; }
     }
-    .Main-Card p {
-        transform: skewX(10deg);
-        font-size: 1.5rem;
-    }
-    nav{
+    nav {
+        padding: 3vh 5vw;
+        gap: 2vh;
         flex-direction: column;
-        gap: 1vh;
+        p {
+            border-left: none;
+            border-bottom: 2px solid #333;
+            padding: 0 0 5px 0;
+            font-size: 3rem;
+            text-align: center;
+            width: 100%;
+        }
     }
-    .dropdown button {
-        min-width: 50vw;
-    }
-    .dropdown-content {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.7);
-        backdrop-filter: blur(15px);
-        border: none;
-        z-index: 1000;
-
-    }
-    .dropdown-content.show {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .dropdown-content a {
-        font-size: 2rem;
-        padding: 20px;
+    .dropdown {
         width: 100%;
-        text-align: center;
-        font-weight: 800;
-        &:hover{
-            background-color: transparent;
-            color: #FFD700;
+        .dropbtn { width: 100%; padding: 15px; font-size: 3rem; letter-spacing: 1px; }
+        .dropdown-content {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(15px);
+            border-radius: 0;
+            &.show { display: flex; flex-direction: column; justify-content: center; }
+            a {
+                font-size: 4rem;
+                padding: 25px;
+                text-align: center;
+                &:hover { background: transparent; color: white; }
+            }
         }
     }
 }
