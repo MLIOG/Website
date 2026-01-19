@@ -11,7 +11,7 @@ Color Palette:
 - Base:    #FFFFFF (White)
 
 # Image links
--https://4kwallpapers.com/nature/os-x-lion-autumn-24055.html
--https://4kwallpapers.com/nature/os-x-mountain-lion-24069.html
--https://4kwallpapers.com/nature/os-x-mountain-lion-24073.html
--https://4kwallpapers.com/nature/bukhansan-national-19908.html
+- https://4kwallpapers.com/nature/os-x-lion-autumn-24055.html
+- https://4kwallpapers.com/nature/os-x-mountain-lion-24069.html
+- https://4kwallpapers.com/nature/os-x-mountain-lion-24073.html
+- https://4kwallpapers.com/nature/bukhansan-national-19908.html
