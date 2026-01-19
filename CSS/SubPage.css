@@ -1,4 +1,10 @@
 /*#region algemeen */
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../CSS/JetBrains_Mono/static/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 * {
     box-sizing: border-box;
     margin: 0;
