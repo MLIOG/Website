@@ -143,6 +143,22 @@ nav {
     }
 }
 /*#endregion*/
+/*#region contact*/
+.Contact{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+    width: 100%;
+    padding:5vh;
+    min-height: 80vh;
+}
+.Contact a img{
+    max-width: 20vh; max-height: 20vh;min-width: 20vh; min-height: 20vh;
+    object-fit: cover;
+}
+/*#endregion*/
 /*#region responsiveness */
 @media screen and (max-width: 1024px) {
     nav {
@@ -179,6 +195,9 @@ nav {
             & > section { width: 100%; max-width: 100%; }
             & .content-section-technical-stack { & li { font-size: 2rem !important; } }
         }
+    }
+    .Contact{
+        flex-direction: column;
     }
 }
 /*#endregion */
