@@ -3,23 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>About Me</title>
-  <link rel="stylesheet" href="../CSS/SubPage.css">
+    <link rel="stylesheet" href="../CSS/SubPage.css">
 </head>
 <body>
 <nav class="Nav-Bar">
-  <a href="../index.html" class="Nav-Logo">
-    <p>Michail Lionakis</p>
-  </a>
-  <div class="dropdown">
-    <button class="dropbtn" onclick="toggleMenu()">Menu</button>
-    <div class="dropdown-content" id="navDropdown">
-      <a href="../HTML/Services.html">Services</a>
-      <a href="../HTML/Projects.html">Projects</a>
-      <a href="../HTML/AboutMe.html">Who am I</a>
-      <a href="../HTML/Contact.html">Contact</a>
+    <a href="../index.html" class="Nav-Logo">
+        <p>Michail Lionakis</p>
+    </a>
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleMenu()">Menu</button>
+        <div class="dropdown-content" id="navDropdown">
+            <a href="#" class="close-btn" onclick="toggleMenu()">&times;</a>
+            <a href="../index.html">Home</a>
+            <a href="../HTML/Services.html">Services</a>
+            <a href="../HTML/Projects.html">Projects</a>
+            <a href="../HTML/AboutMe.html">Who am I</a>
+            <a href="../HTML/Contact.html">Contact</a>
+        </div>
     </div>
-  </div>
 </nav>
+<div class="about">
+    <header>
+        <h1>About Michail Lionakis</h1>
+        <p>Ambitious Programmer | .NET Developer | Problem Solver</p>
+    </header>
+    <div class="content-container">
+        <section class="content-section-Journey">
+            <h3>The Journey</h3>
+            <p>I am a dedicated programming student currently specializing in <strong>.NET Development and Database
+                Management</strong> at Hogeschool PXL-IT. My passion lies in translating complex logic into clean,
+                efficient
+                code.</p>
+            <br>
+            <p>Beyond the screen, my experience in healthcare environments has shaped me into a developer
+                who
+                values discipline and teamwork.</p>
+            <br>
+            <h3>Core Strengths</h3>
+            <ul>
+                <li><strong>Adaptability:</strong> Quickly mastering new frameworks.</li>
+                <li><strong>Team Collaboration:</strong> Effective in dynamic environments.</li>
+                <li><strong>Multilingual:</strong> Dutch, English, and Greek.</li>
+            </ul>
+        </section>
+        <section class="content-section-technical-stack">
+            <h4>Technical Stack</h4>
+            <ul>
+                <li>C# & .NET</li>
+                <li>SQL & Database Design</li>
+                <li>Web Development</li>
+            </ul>
+            <h4>Certifications</h4>
+            <ul>
+                <li>Red Cross First Aid</li>
+                <li>Diploma Physical Education</li>
+            </ul>
+        </section>
+    </div>
+</div>
 </body>
 <script src="../JavaScript/DropDownMenu.js"></script>
 </html>
