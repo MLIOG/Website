@@ -14,53 +14,80 @@
         <button class="dropbtn" onclick="toggleMenu()">Menu</button>
         <div class="dropdown-content" id="navDropdown">
             <a href="#" class="close-btn" onclick="toggleMenu()">&times;</a>
-            <a href="../index.html">Home</a>
-            <a href="../HTML/Services.html">Services</a>
-            <a href="../HTML/Projects.html">Projects</a>
-            <a href="../HTML/AboutMe.html">Who am I</a>
-            <a href="../HTML/Contact.html">Contact</a>
+            <div class="lang-menu-row">
+                <div class="lang-links">
+                    <a href="javascript:void(0)" onclick="changeLanguage('nl')" class="lang-option" id="lang-nl">NL</a>
+                    <span class="divider">|</span>
+                    <a href="javascript:void(0)" onclick="changeLanguage('en')" class="lang-option" id="lang-en">EN</a>
+                </div>
+            </div>
+            <a href="../index.html" data-nl="Thuis" data-en="Home">Home</a>
+            <a href="../HTML/Services.html" data-nl="Diensten" data-en="Services">Services</a>
+            <a href="../HTML/Projects.html" data-nl="Projecten" data-en="Projects">Projects</a>
+            <a href="../HTML/AboutMe.html" data-nl="Wie ben ik" data-en="Who am I">Who am I</a>
+            <a href="../HTML/Contact.html" data-nl="Contact" data-en="Contact">Contact</a>
         </div>
     </div>
 </nav>
 <div class="about">
     <header>
-        <h1>About Michail Lionakis</h1>
-        <p>Ambitious Programmer | .NET Developer | Problem Solver</p>
+        <h1 data-nl="Over Michail Lionakis" data-en="About Michail Lionakis">About Michail Lionakis</h1>
+        <p data-nl="Ambitieuze programmeur | .NET/webontwikkelaar | Probleemoplosser"
+           data-en="Ambitious Programmer | .NET/WEB Developer | Problem Solver">
+            Ambitious Programmer | .NET/WEB Developer | Problem Solver</p>
     </header>
     <div class="content-container">
         <section class="content-section-Journey">
-            <h3>The Journey</h3>
-            <p>I am a dedicated programming student currently specializing in <strong>.NET Development and Database
-                Management</strong> at Hogeschool PXL-IT. My passion lies in translating complex logic into clean,
-                efficient
-                code.</p>
+            <h3 data-en="The Journey" data-nl="De Reis">The Journey</h3>
+            <p data-en="I am a dedicated programming student currently specializing in .NET Development and Database
+                Management at Hogeschool PXL-IT."
+               data-nl="Ik ben een toegewijde programmeerstudent en specialiseer me momenteel in .NET-ontwikkeling en databasebeheer aan de Hogeschool PXL-IT.">
+                I am a dedicated programming student currently specializing in <strong>.NET Development and Database
+                Management</strong> at Hogeschool PXL-IT.</p>
             <br>
-            <p>Beyond the screen, my experience in healthcare environments has shaped me into a developer
-                who
-                values discipline and teamwork.</p>
+            <p data-nl="Buiten het scherm om heeft mijn ervaring in de gezondheidszorg mij gevormd tot een ontwikkelaar die discipline en teamwork waardeert."
+               data-en="Beyond the screen, my experience in healthcare environments has shaped me into a developer
+                who values discipline and teamwork.">Beyond the screen, my experience in healthcare environments has
+                shaped me into a developer
+                who values discipline and teamwork.</p>
             <br>
-            <h3>Core Strengths</h3>
+            <h3 data-en="Core Strengths" data-nl="Kernsterkten">Core Strengths</h3>
             <ul>
-                <li><strong>Adaptability:</strong> Quickly mastering new frameworks.</li>
-                <li><strong>Team Collaboration:</strong> Effective in dynamic environments.</li>
-                <li><strong>Multilingual:</strong> Dutch, English, and Greek.</li>
+                <li data-nl="Aanpassingsvermogen: Snel nieuwe frameworks onder de knie krijgen." data-en="Adaptability: Quickly mastering new frameworks."><strong>Adaptability:</strong> Quickly mastering new frameworks.</li>
+                <li data-nl="Samenwerking in teamverband: Effectief in dynamische omgevingen." data-en="Team Collaboration: Effective in dynamic environments."><strong>Team Collaboration:</strong> Effective in dynamic environments.</li>
+                <li data-nl="Meertalig: Nederlands, Engels en Grieks." data-en="Multilingual: Dutch, English, and Greek."><strong>Multilingual:</strong> Dutch, English, and Greek.</li>
             </ul>
         </section>
         <section class="content-section-technical-stack">
             <h4>Technical Stack</h4>
             <ul>
                 <li>C# & .NET</li>
-                <li>SQL & Database Design</li>
-                <li>Web Development</li>
+                <li data-nl="SQL & Database Ontwerp" data-en="SQL & Database Design">SQL & Database Design</li>
+                <li data-nl="Web Ontwikkelaar" data-en="Web Development">Web Development</li>
             </ul>
             <h4>Certifications</h4>
             <ul>
-                <li>Red Cross First Aid</li>
-                <li>Diploma Physical Education</li>
+                <li data-en="Red Cross First Aid" data-nl="Rode Kruis Eerste Hulp">Red Cross First Aid</li>
+                <li data-en="Diploma Physical Education" data-nl="Diploma Lichamelijke Opvoeding">Diploma Physical Education</li>
             </ul>
         </section>
     </div>
 </div>
+<footer class="Main-Footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>&copy; 2026 Michail Lionakis</h4>
+        </div>
+        <div class="footer-links">
+            <a href="../HTML/Contact.html">Contact</a>
+            <button id="backToTop" onclick="scrollToTop()" title="Go to top">
+                BACK TO TOP
+            </button>
+        </div>
+    </div>
+</footer>
 </body>
+<script src="../JavaScript/TopButton.js"></script>
 <script src="../JavaScript/DropDownMenu.js"></script>
+<script src="../JavaScript/LanguageHandler.js"></script>
 </html>

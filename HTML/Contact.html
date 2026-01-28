@@ -14,11 +14,18 @@
     <button class="dropbtn" onclick="toggleMenu()">Menu</button>
     <div class="dropdown-content" id="navDropdown">
       <a href="#" class="close-btn" onclick="toggleMenu()">&times;</a>
-      <a href="../index.html">Home</a>
-      <a href="../HTML/Services.html">Services</a>
-      <a href="../HTML/Projects.html">Projects</a>
-      <a href="../HTML/AboutMe.html">Who am I</a>
-      <a href="../HTML/Contact.html">Contact</a>
+      <div class="lang-menu-row">
+        <div class="lang-links">
+          <a href="javascript:void(0)" onclick="changeLanguage('nl')" class="lang-option" id="lang-nl">NL</a>
+          <span class="divider">|</span>
+          <a href="javascript:void(0)" onclick="changeLanguage('en')" class="lang-option" id="lang-en">EN</a>
+        </div>
+      </div>
+      <a href="../index.html" data-nl="Thuis" data-en="Home">Home</a>
+      <a href="../HTML/Services.html" data-nl="Diensten" data-en="Services">Services</a>
+      <a href="../HTML/Projects.html" data-nl="Projecten" data-en="Projects">Projects</a>
+      <a href="../HTML/AboutMe.html" data-nl="Wie ben ik" data-en="Who am I">Who am I</a>
+      <a href="../HTML/Contact.html" data-nl="Contact" data-en="Contact">Contact</a>
     </div>
   </div>
 </nav>
@@ -28,6 +35,21 @@
   <a href="https://www.linkedin.com/in/michail-lionakis/" target="_blank"><img src="../Images/Icons/linkedin.png" alt="linkdin"></a>
 
 </div>
+<footer class="Main-Footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>&copy; 2026 Michail Lionakis</h4>
+    </div>
+    <div class="footer-links">
+      <a href="../HTML/Contact.html">Contact</a>
+      <button id="backToTop" onclick="scrollToTop()" title="Go to top">
+        BACK TO TOP
+      </button>
+    </div>
+  </div>
+</footer>
 </body>
+<script src="../JavaScript/TopButton.js"></script>
 <script src="../JavaScript/DropDownMenu.js"></script>
+<script src="../JavaScript/LanguageHandler.js"></script>
 </html>

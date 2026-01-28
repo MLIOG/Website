@@ -3,25 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <title>Services</title>
-  <link rel="stylesheet" href="../CSS/SubPage.css">
+    <link rel="stylesheet" href="../CSS/SubPage.css">
 </head>
 <body>
 <nav class="Nav-Bar">
-  <a href="../index.html" class="Nav-Logo">
-    <p>Michail Lionakis</p>
-  </a>
-  <div class="dropdown">
-    <button class="dropbtn" onclick="toggleMenu()">Menu</button>
-    <div class="dropdown-content" id="navDropdown">
-      <a href="#" class="close-btn" onclick="toggleMenu()">&times;</a>
-      <a href="../index.html">Home</a>
-      <a href="../HTML/Services.html">Services</a>
-      <a href="../HTML/Projects.html">Projects</a>
-      <a href="../HTML/AboutMe.html">Who am I</a>
-      <a href="../HTML/Contact.html">Contact</a>
+    <a href="../index.html" class="Nav-Logo">
+        <p>Michail Lionakis</p>
+    </a>
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleMenu()">Menu</button>
+        <div class="dropdown-content" id="navDropdown">
+            <a href="#" class="close-btn" onclick="toggleMenu()">&times;</a>
+            <div class="lang-menu-row">
+                <div class="lang-links">
+                    <a href="javascript:void(0)" onclick="changeLanguage('nl')" class="lang-option" id="lang-nl">NL</a>
+                    <span class="divider">|</span>
+                    <a href="javascript:void(0)" onclick="changeLanguage('en')" class="lang-option" id="lang-en">EN</a>
+                </div>
+            </div>
+            <a href="../index.html" data-nl="Thuis" data-en="Home">Home</a>
+            <a href="../HTML/Services.html" data-nl="Diensten" data-en="Services">Services</a>
+            <a href="../HTML/Projects.html" data-nl="Projecten" data-en="Projects">Projects</a>
+            <a href="../HTML/AboutMe.html" data-nl="Wie ben ik" data-en="Who am I">Who am I</a>
+            <a href="../HTML/Contact.html" data-nl="Contact" data-en="Contact">Contact</a>
+        </div>
     </div>
-  </div>
 </nav>
+<main class="about">
+    <header>
+        <h1 data-en="Services" data-nl="Diensten">Services</h1>
+        <p data-en="Solutions tailored to your digital needs."
+           data-nl="Oplossingen op maat voor uw digitale behoeften.">Solutions tailored to your digital needs.</p>
+    </header>
+    <div class="services-grid">
+        <article class="service-item">
+            <div>
+                <span class="service-tag" data-nl="Ontwikkeling" data-en="Development">Development</span>
+                <h3 data-en="Web Design" data-nl="Webontwerp">Web Design</h3>
+                <p data-nl="Het bouwen van responsieve, hoogwaardige websites met behulp van moderne technologieën. Focus op schone code en SEO-optimalisatie."
+                   data-en="Building responsive, high-performance websites using modern tech stacks. Focused on clean code and SEO optimization.">
+                    Building responsive, high-performance websites using modern tech stacks. Focused on clean code and
+                    SEO optimization.
+                </p>
+            </div>
+        </article>
+        <article class="service-item">
+            <div>
+                <span class="service-tag" data-nl="Ontwerp" data-en="Design">Design</span>
+                <h3 data-nl="UI/UX Layouts" data-en="UI/UX Layouts">UI/UX Layouts</h3>
+                <p data-nl="Het creëren van intuïtieve gebruikersinterfaces en -ervaringen die de eindgebruiker centraal stellen en tegelijkertijd een unieke merkidentiteit behouden."
+                   data-en="Creating intuitive user interfaces and experiences that prioritize the end-user while maintaining a unique brand identity.">
+                    Creating intuitive user interfaces and experiences that prioritize the end-user while maintaining a
+                    unique brand identity.</p>
+            </div>
+        </article>
+        <article class="service-item">
+            <div>
+                <span class="service-tag" data-nl="Advies" data-en="Consulting">Consulting</span>
+                <h3 data-nl="Technical Support" data-en="Technical Support">Technical Support</h3>
+                <p data-nl="Ondersteuning bij de implementatie van websites, het beheer van GitHub-workflows en algemene softwareprobleemoplossing."
+                   data-en="Assistance with website deployment, GitHub workflow management, and general software troubleshooting.">
+                    Assistance with website deployment, GitHub workflow management, and general software
+                    troubleshooting.</p>
+            </div>
+        </article>
+    </div>
+</main>
+<footer class="Main-Footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>&copy; 2026 Michail Lionakis</h4>
+        </div>
+        <div class="footer-links">
+            <a href="../HTML/Contact.html">Contact</a>
+            <button id="backToTop" onclick="scrollToTop()" title="Go to top">
+                BACK TO TOP
+            </button>
+        </div>
+    </div>
+</footer>
 </body>
+<script src="../JavaScript/TopButton.js"></script>
 <script src="../JavaScript/DropDownMenu.js"></script>
+<script src="../JavaScript/LanguageHandler.js"></script>
 </html>
