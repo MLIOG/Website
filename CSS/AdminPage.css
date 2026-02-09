@@ -161,5 +161,6 @@ button:hover { background-color: darkgray; }
     .dropdown .dropdown-content a { font-size: 4rem; padding: 25px; text-align: center; }
     .dropdown .dropdown-content a:hover { background: transparent; color: white; }
     .dropdown .dropdown-content .close-btn { display: block; position: absolute; top: 20px; right: 40px; font-size: 5rem; }
+    #save-status{font-size: 2rem}
 }
 /*#endregion */
