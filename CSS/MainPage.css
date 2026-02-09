@@ -245,7 +245,6 @@ nav {
     border-top: 1px solid #333;
     padding: 4.5vh;
 }
-
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -254,18 +253,19 @@ nav {
     justify-content: center;
     align-items: flex-start;
 }
-
+.footer-section {
+    display: flex;
+    flex-direction: row;
+}
 .footer-section h4 {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #666;
 }
-
 .footer-links {
     display: none;
     gap: 20px;
 }
-
 .footer-links a {
     color: white;
     text-decoration: none;

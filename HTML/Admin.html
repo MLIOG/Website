@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Notepad</title>
+    <link rel="stylesheet" href="../CSS/AdminPage.css">
+</head>
+<body>
+<nav>
+    <a href="../index.html">Admin notes</a>
+</nav>
+<div id="login-container">
+    <input type="email" id="adminEmail" placeholder="Email">
+    <input type="password" id="adminPassword" placeholder="Password">
+    <button onclick="login()">Login</button>
+</div>
+<div id="admin-content" style="display: none;">
+    <div class="notepad-container">
+        <textarea id="textInput" placeholder="Write your notes here..."></textarea>
+        <div class="button-row">
+            <button onclick="updateData()">Save Note</button>
+            <button onclick="logout()" style="background-color: #ff4d4d;">Logout</button>
+        </div>
+    </div>
+</div>
+<script type="module" src="../JavaScript/AdminData.js"></script>
+</body>
+</html>
