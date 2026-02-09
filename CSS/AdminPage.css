@@ -144,6 +144,7 @@ button {
     font-weight: bold;
 }
 button:hover { background-color: darkgray; }
+#save-status{color: #4CAF50; font-weight: bold; margin-left: 10px; opacity: 0; transition: opacity 0.5s;}
 /*#endregion */
 /*#region mobile-responsive */
 @media screen and (max-width: 1024px) {

@@ -67,3 +67,21 @@ window.toggleMenu = function() {
 window.changeLanguage = function(lang) {
     console.log("Language changed to: " + lang);
 };
+
+//save status
+window.updateData = async function() {
+    const newText = document.getElementById('textInput').value;
+    const status = document.getElementById('save-status');
+    try {
+        await setDoc(doc(db, "content", "siteText"), { message: newText });
+        status.style.opacity = "1";
+        setTimeout(() => {
+            status.style.opacity = "0";
+        }, 2000);
+    } catch (error) {
+        console.error("Save failed: ", error);
+        status.innerText = "Error!";
+        status.style.color = "red";
+        status.style.opacity = "1";
+    }
+};
