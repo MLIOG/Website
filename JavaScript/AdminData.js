@@ -56,3 +56,14 @@ window.updateData = async function() {
     await setDoc(doc(db, "content", "siteText"), { message: newText });
     alert("Saved!");
 };
+
+//for toggle menu
+window.toggleMenu = function() {
+    const dropdown = document.getElementById("navDropdown");
+    if (dropdown) {
+        dropdown.classList.toggle("show");
+    }
+};
+window.changeLanguage = function(lang) {
+    console.log("Language changed to: " + lang);
+};
